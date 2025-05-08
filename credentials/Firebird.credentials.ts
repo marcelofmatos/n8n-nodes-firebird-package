@@ -70,5 +70,30 @@ export class Firebird implements ICredentialType {
 			default: false,
 			description: 'Set to true to lowercase keys.',
 		},
+		{
+			displayName: 'Character Set',
+			name: 'charset',
+			type: 'options',  // Tipo options para criar uma lista dropdown
+			options: [
+				{
+					name: 'UTF8',
+					value: 'UTF8',
+				},
+				{
+					name: 'WIN1252',
+					value: 'WIN1252',
+				},
+				{
+					name: 'ISO8859_1',
+					value: 'ISO8859_1',
+				},
+				{
+					name: 'ASCII',
+					value: 'ASCII',
+				},
+			],
+			default: 'UTF8',
+			description: 'The character set to use for the connection',
+		},
 	];
 }
